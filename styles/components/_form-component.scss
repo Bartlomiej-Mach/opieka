@@ -1,0 +1,149 @@
+.form-wrapper {
+    &__content {
+        display: flex;
+        min-height: 710px;
+        position: relative;
+        background-color: $color-white;
+        &--form {
+            padding: 100px;
+            form {
+                position: relative;
+                height: 100%;
+                .inputs-box {
+                    
+                    .input-container {
+                        display: none;
+                        flex-direction: column;
+                        
+                        h2 {
+                            margin-bottom: 50px;
+                        }
+
+                        .input-inside {
+                            width: 430px;
+                            padding: 10px 0;
+                            border: none;
+                            background-color: transparent;
+                            font-size: 2rem;
+                            border-bottom: 1px solid $color-form-gray;
+                            color: $color-black;
+                            transition: .2s;
+                            outline: none;
+                            font-family: $font-source-2;
+                        }
+                        textarea.input-inside {
+                            resize: none;
+                            height: 250px;
+                            background-color: $color-form-textarea;
+                            padding: 10px 5px;
+                        }
+                        .input-inside::placeholder {
+                            color: $color-form-gray;
+                            opacity: 1;
+                        }
+                        
+                        .input-inside::-ms-input-placeholder {
+                            color: $color-form-gray;
+                        }
+
+                        .input-inside:active:focus {
+                            border-bottom: 1px solid $color-black;
+                        }
+                        .input-inside:not(:last-child) {
+                            margin-bottom: 20px;
+                        }
+                    }
+                    .active--slide {
+                        display: flex;
+                    }
+                }
+                .navigation-buttons {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    position: absolute;
+                    bottom: 0;
+                    .hidden {
+                        display: none;
+                    }
+                    #back-btn {
+                        .button-value {
+                            margin-left: 10px;
+                            margin-right: 0;
+                        }
+                        i {
+                            transform: rotate(180deg);
+                        }
+                        &:hover i {
+                            transform: rotate(180deg) translateX(5px);
+                        }
+                    }
+                    a, button {
+                        display: flex;
+                        color: $color-white;
+                        border: none;
+                        cursor: pointer;
+                        &::before {
+                            display: none;
+                        }
+                    }
+                    #submit-btn {
+                        background-color: $color-super-light-green;
+                        &::before {
+                            display: none;
+                        }
+                    }
+                    .btn-disabled {
+                        pointer-events: none;
+                        background-color: $color-gray !important;
+                        color: $color-form-gray
+                    }
+                }
+            }
+        }
+        &--img {
+            width: 100%;
+            
+            background-image: url('../../assets/imgs/form/form.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+        }
+    }
+}
+
+@include break-point-down(md) {
+    .form-wrapper {
+        background-color: $color-white;
+        &__content {
+            width: 100%;
+            min-height: 530px;
+            &--form {
+                width: 100%;
+                form {
+                    .inputs-box {
+                        width: 100%;
+                        .input-container {
+                            .input-inside {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            &--img {
+                display: none;
+            }
+        }
+    }
+}
+@include break-point-down(mb) {
+    .form-wrapper {
+        &__content {
+            &--form {
+                padding: 70px 0;
+            }
+        }
+    }
+}

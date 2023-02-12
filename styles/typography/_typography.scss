@@ -1,0 +1,76 @@
+// Sizes
+
+
+$font-h1-desktop: 7rem;
+$font-h1-mobile: 4.5rem;
+
+$font-h2-desktop: 5rem;
+$font-h2-mobile: 3.5rem;
+
+$font-h3-desktop: 1.8rem;
+
+$font-text: 1.8rem;
+
+// Weight
+
+$font-regular: 400;
+$font-bold: 800;
+
+// font family
+
+$font-source: 'Source Sans Pro', sans-serif;
+$font-source-2: 'Mulish', sans-serif;
+
+
+
+// baisic typography
+html { 
+    font-size: 10px; 
+    letter-spacing: 0.46px;
+}
+
+h1 {
+    font-size: $font-h1-desktop;
+    font-weight: $font-regular;
+    font-family: $font-source;
+    line-height: $font-h1-desktop;
+    text-transform: uppercase;
+    @include break-point-down(mb) {
+        font-size: $font-h1-mobile;
+        line-height: $font-h1-mobile;
+    }
+}
+
+h2 {
+    font-size: $font-h2-desktop;
+    font-weight: $font-bold;
+    font-family: $font-source;
+    line-height: $font-h2-desktop;
+    @include break-point-down(mb) {
+        font-size: $font-h2-mobile;
+        line-height: $font-h2-mobile;
+    }
+}
+
+h3 {
+    font-size: $font-h3-desktop;
+    font-weight: $font-regular;
+    font-family: $font-source-2;
+   
+}
+
+p,
+span {
+    font-family: $font-source-2;
+    font-weight: $font-regular;
+    font-size: $font-text;
+    
+}
+
+a {
+    text-decoration: none;
+    font-size: $font-text;
+    font-weight: $font-bold;
+    font-family: $font-source-2;
+    color: $color-white;
+}

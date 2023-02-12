@@ -1,0 +1,60 @@
+// styling primary button
+
+// .btn-primary {
+//     padding: 17px 24px;
+//     background-color: $color-light-green;
+//     border-radius: 5px;
+//     margin-top: 35px;
+// }
+
+.btn-primary {
+    padding: 17px 24px;;
+    background-color: $color-light-green;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-top: 35px;
+    position: relative;
+    .button-value {
+        position: relative;
+        font-weight: $font-bold;
+        margin-right: 10px;
+    }
+    i {
+        transition: .2s;
+    }
+    
+    &:hover i {
+        transform: translateX(5px);
+    }
+    &:hover::before {
+        opacity: 1;
+    }
+    &::before {
+        content: '';
+        width: 5px;
+        height: 100%;
+        background-color: $color-red;
+        right: 5px;
+        top: 0;
+        position: absolute;
+        right: 0;
+        opacity: 0;
+        transition: .2s;
+    }
+}
+
+.btn-primary.dark-bg {
+    background-color: $color-darkest-green;
+}
+
+
+@include break-point-down(mb) {
+    .btn-primary {
+        padding: 14px 17px;
+        margin-top: 30px;
+    }
+}

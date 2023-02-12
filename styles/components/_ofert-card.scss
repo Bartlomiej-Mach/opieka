@@ -1,0 +1,101 @@
+.ofert-cards {
+    width: 100%;
+    transform: translateY(-50%);
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &--card-wrapper {
+            width: 440px;
+            min-height: 175px;
+            background-color: $color-white;
+            color: $color-black;
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            .card-icon {
+                min-width: 175px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $color-light-green;
+                i {
+                    font-size: 8rem;
+                }
+            }
+            .card-text {
+                width: 100%;
+                padding: 12px;
+                &--name {
+                    font-weight: $font-bold;
+                }
+                &--description {
+                    margin-top: 10px;
+                }
+            }
+            &::before {
+                content: '';
+                width: 100%;
+                height: 2px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background-color: $color-black;
+                transform: translateY(5px);
+                transition: .2s;
+                transition-delay: .1s;
+            }
+            &:hover::before {
+                transform: translateY(0px);
+                transition-delay: .0s;
+            }
+        }
+    }
+}
+
+
+@include break-point-down(lg) {
+    .ofert-cards {
+        &__content {
+            justify-content: space-around;
+            &--card-wrapper {
+                &:nth-child(3) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@include break-point-down(md) {
+    .ofert-cards {
+        transform: translateY(0%);
+        &__content {
+            flex-direction: column;
+            &--card-wrapper {
+                width: 100%;
+                min-height: 150px;
+                margin-top: 15px;
+                &:nth-child(3) {
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+
+@include break-point-down(mb) {
+    .ofert-cards {
+        &__content {
+            &--card-wrapper {
+                .card-icon {
+                    min-width: 140px;
+                    i {
+                        font-size: 6rem;
+                    }
+                }
+                
+            }
+        }
+    }
+}

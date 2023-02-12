@@ -1,0 +1,66 @@
+.ofert {
+    background-color: $color-light-green;
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        padding: 70px 0;
+        &--item {
+            background-color: $color-bg-gray;
+            max-width: 445px;
+            width: 100%;
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+            .card-img {
+                background-image: url('../../assets/imgs/ofert/placeholder.jpg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 200px;
+                width: 100%;
+            }
+            .card-content {
+                padding: 20px 40px;
+                .card-title {
+                    font-weight: $font-bold;
+                    font-size: 2rem;
+                    margin-bottom: 20px;
+                    display: block;
+                }
+                .card-text {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@include break-point-down(md) {
+    .ofert {
+        &__content {
+            flex-direction: column;
+            &--item {
+                max-width: 100%;
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+                .card-content {
+                    .card-text {
+                        height: 100% !important;
+                    }
+                }
+            }
+        }
+    }
+}
+@include break-point-down(mb) {
+    .ofert {
+        &__content {
+            &--item {
+                .card-content {
+                    padding: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,99 @@
+.about-comapny {
+    &__content {
+        display: flex;
+        &--text-wrapper {
+            padding: 30px 50px;
+            h2 {
+                margin-bottom: 40px;
+            }
+            .list-wrapper {
+                &--item {
+                    display: flex;
+                    &:not(:last-child) {
+                        margin-bottom: 30px;
+                    }
+                    .list-number {
+                        min-width: 59px;
+                        height: 59px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 2px solid $color-light-green;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                        span {
+                            color: $color-light-green;
+                            font-weight: $font-bold;
+                            font-size: 2rem;
+                        }
+                    }
+                    .list-content {
+                        margin-top: 16px;
+                        max-width: 500px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        .list-title {
+                            font-weight: $font-bold;
+                            margin-bottom: 14px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &--img-wrapper {
+            min-width: 500px;
+            background-image: url('../../assets/imgs/about/about.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            &::before {
+                background-color: $color-light-green;
+                content: '';
+                width: 100%;
+                height: 25px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+}
+
+@include break-point-down(md) {
+    .about-comapny {
+        margin-top: 40px;
+        &__content {
+            flex-direction: column;
+            &--text-wrapper {
+                padding: 30px 10px; 
+                .list-wrapper {
+                    &--item {
+                        .list-content {
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+            &--img-wrapper {
+                height: 400px;
+                min-width: 100%;
+            }
+        }
+    }
+}
+
+@include break-point-down(mb) {
+    .about-comapny {
+        &__content {
+            &--text-wrapper {
+                padding: 30px 0px; 
+                h2 {
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+}
