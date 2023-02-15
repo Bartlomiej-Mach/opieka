@@ -64,28 +64,30 @@ class Form {
     
     initChangeAction = () => {
         this.allInputs.forEach(element => {
+            element.addEventListener('change', () => {
+                this.checkInputsEmpty();
+            });
             element.addEventListener('keyup', () => {
                 this.checkInputsEmpty();
-            })
+            });
         });
     }
 
     checkInputsEmpty = () => {
         const activeSlidesInputs = document.querySelectorAll('.input-container.active--slide .input-inside');
-        
-       if(activeSlidesInputs.length > 1) {
-        if(activeSlidesInputs[0].value !== '' && activeSlidesInputs[1].value !== '') {
-            this.buttonNext.classList.remove('btn-disabled');
-        } else {
-            this.buttonNext.classList.add('btn-disabled');
+        if(activeSlidesInputs.length > 1) {
+            if(activeSlidesInputs[0].value !== '' && activeSlidesInputs[1].value !== '') {
+                this.buttonNext.classList.remove('btn-disabled');
+            } else {
+                this.buttonNext.classList.add('btn-disabled');
+            }
+        } else if(activeSlidesInputs.length === 1) {
+            if(activeSlidesInputs[0].value !== '') {
+                this.buttonSubmit.classList.remove('btn-disabled');
+            } else {
+                this.buttonSubmit.classList.add('btn-disabled');
+            } 
         }
-       } else if(activeSlidesInputs.length === 1) {
-        if(activeSlidesInputs[0].value !== '') {
-            this.buttonSubmit.classList.remove('btn-disabled');
-        } else {
-            this.buttonSubmit.classList.add('btn-disabled');
-        } 
-       }
     }
     
 }

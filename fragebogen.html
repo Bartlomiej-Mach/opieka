@@ -15,15 +15,70 @@
     <script src="https://kit.fontawesome.com/786fc2d0ee.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+
+    <nav class="navigation">
+        <div class="container">
+            <div class="navigation__content">
+                <div class="navigation__content--logo">
+                    <a href="">
+                        imgaa
+                    </a>
+                </div>
+                <button class="navigation__content--nav-btn">
+                    <div class="line-wrapper">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </button>
+                <div class="navigation__content--link-list">
+                    <ul>
+                        <li>
+                            <a href="./index.html">
+                                über uns
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./verhinderungspflege.html">
+                                Verhinderungspflege
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./leistungen.html">
+                                Andere leistungen
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./fragebogen.html">
+                                Fragebogen / Antrag
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./bewertungen.html">
+                                Bewertungen
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./kontakt.html">
+                                Kontakt
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
     <header class="dashboard-main">
         <div class="container">
             <div class="dashboard-main__content">
                 <h1>Zapewnienie opieki <br> dla podróży życia</h1>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p>
-                <a href="#informacje" class="btn-primary dark-bg">
+                <a href="#info" class="btn-primary dark-bg">
                     <span class="button-value">
-                        ODKRYWAJ TERAZ
+                        JETZT ENTDECKEN
                     </span>
                     <i class="fa-solid fa-angle-right"></i>
                 </a>
@@ -48,31 +103,32 @@
                         <div class="inputs-box">
     
                             <div class="input-container active--slide">
-                                <h2>1</h2>
+                                <h2>Geben Sie Ihre
+                                    Vorname und Nachname</h2>
                                 <input class="input-inside" placeholder="Name" type="text" name="name" required>
-                                <input class="input-inside" placeholder="Surename" type="text" name="surename" required>
+                                <input class="input-inside" placeholder="Vorname" type="text" name="Vorname" required>
                             </div>
 
                             <div class="input-container">
-                                <h2>2</h2>
-                                <input class="input-inside" placeholder="Birthday" type="text" name="Birthday" required>
+                                <h2>Geben Sie Ihre Vorname und Nachname</h2>
+                                <input class="input-inside" placeholder="Geburtsdatum" type="text" name="Geburtsdatum" required>
                                 <input class="input-inside" placeholder="Adress" type="text" name="Adress" required>
                             </div>
 
                             <div class="input-container">
-                                <h2>3</h2>
-                                <input class="input-inside" placeholder="Phone" type="text" name="Phone" required>
+                                <h2>Kontakt eingeben für dich</h2>
+                                <input class="input-inside" placeholder="Telefon" type="text" name="Telefon" required>
                                 <input class="input-inside" placeholder="E-mail" type="text" name="E-mail" required>
                             </div>
 
                             <div class="input-container">
-                                <h2>4</h2>
-                                <input class="input-inside" placeholder="From 24/01/2023" type="text" name="From" required>
-                                <input class="input-inside" placeholder="To 27/01/2023" type="text" name="To" required>
+                                <h2>Zeitraum der Pflege</h2>
+                                <input class="input-inside date" placeholder="Aus 24/01/2023" type="date" name="Aus" required>
+                                <input class="input-inside" placeholder="Bis 27/01/2023" type="date" name="Bis" required>
                             </div>
 
                             <div class="input-container">
-                                <h2>5</h2>
+                                <h2>Medizinischer Hintergrund</h2>
                                 <textarea class="input-inside" placeholder="Description" name="Description" required></textarea>
                             </div>
 
@@ -101,20 +157,20 @@
                                 <a class="btn-primary button--active" id="back-btn">
                                     <i class="fa-solid fa-angle-right"></i>
                                     <span class="button-value">
-                                        BACK
+                                        VORHERIGE
                                     </span>
                                 </a>
                             </div>
                             <div class="navigation-buttons--right">
                                 <a class="btn-primary button--active" id="next-btn">
                                     <span class="button-value">
-                                        NEXT
+                                        NÄCHSTE
                                     </span>
                                     <i class="fa-solid fa-angle-right"></i>
                                 </a>
                                 <button type="submit" class="btn-primary" id="submit-btn">
                                     <span class="button-value">
-                                        SEND
+                                        SCHICKEN
                                     </span>
                                     <i class="fa-solid fa-angle-right"></i>
                                 </button>
