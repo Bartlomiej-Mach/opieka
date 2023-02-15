@@ -330,6 +330,15 @@ body, html {
   bottom: 0;
   left: 0;
 }
+.about-comapny__second-content {
+  padding: 40px 0;
+}
+.about-comapny__second-content h2 {
+  margin-bottom: 30px;
+}
+.about-comapny__second-content p {
+  margin-bottom: 30px;
+}
 
 @media (max-width: 1024px) {
   .about-comapny {

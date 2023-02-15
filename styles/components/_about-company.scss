@@ -61,6 +61,15 @@
             }
         }
     }
+    &__second-content {
+        padding: 40px 0;
+        h2 {
+            margin-bottom: 30px;
+        }
+        p {
+            margin-bottom: 30px;
+        }
+    }
 }
 
 @include break-point-down(md) {
