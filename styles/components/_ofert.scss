@@ -4,6 +4,9 @@
         display: flex;
         justify-content: space-between;
         padding: 70px 0;
+        &:first-child {
+            padding-bottom: 0;
+        }
         &--item {
             background-color: $color-bg-gray;
             max-width: 445px;

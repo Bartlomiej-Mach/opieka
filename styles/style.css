@@ -269,6 +269,9 @@ body, html {
     font-size: 6rem;
   }
 }
+.about-comapny {
+  padding-top: 50px;
+}
 .about-comapny__content {
   display: flex;
 }
@@ -417,6 +420,9 @@ body, html {
   display: flex;
   justify-content: space-between;
   padding: 70px 0;
+}
+.ofert__content:first-child {
+  padding-bottom: 0;
 }
 .ofert__content--item {
   background-color: #F2F2F2;

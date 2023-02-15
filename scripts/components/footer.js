@@ -17,9 +17,12 @@ class Footer {
             'Kontakt', 
         ];
         this.listOfOfert = [
-            'nazwa usługi o długiej nazwie',
-            'nazwa usługi',
-            'nazwa usługi średnia'
+            'Kurzzeitpflege',
+            'Palliativ',
+            'Nachtwache',
+            'Persönliches/Assistenten Budget',
+            'Häusliche Pflege mit Unterkunft',
+            'Häusliche Pflege ohne Unterkunft, stundennachweise '
         ];
     }
 
