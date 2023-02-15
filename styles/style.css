@@ -810,7 +810,7 @@ body, html {
   }
   .form-wrapper__content {
     width: 100%;
-    min-height: 530px;
+    min-height: 600px;
   }
   .form-wrapper__content--form {
     width: 100%;
@@ -967,7 +967,7 @@ body, html {
   transform: translateY(0px) rotate(45deg);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1220px) {
   .navigation__content {
     padding: 15px 0;
   }

@@ -78,7 +78,7 @@
     }
 }
 
-@include break-point-down(md) {
+@include break-point-down(tab) {
     .navigation {
         &__content {
             padding: 15px 0;
