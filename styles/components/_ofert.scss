@@ -15,13 +15,23 @@
                 margin-right: 20px;
             }
             .card-img {
-                background-image: url('../../assets/imgs/ofert/placeholder.jpg');
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
                 height: 200px;
                 width: 100%;
             }
+            &:nth-child(1) .card-img{
+                background-image: url('../../assets/imgs/ofert/placeholder.jpg');
+            }
+            &:nth-child(2) .card-img{
+                background-image: url('../../assets/imgs/ofert/placeholder2.jpg');
+            }
+            &:nth-child(3) .card-img{
+                background-image: url('../../assets/imgs/ofert/placeholder3.jpg');
+            }
+
+
             .card-content {
                 padding: 20px 40px;
                 .card-title {
@@ -34,6 +44,17 @@
                     display: block;
                 }
             }
+        }
+    }
+    .second-floor .ofert__content--item {
+        &:nth-child(1) .card-img{
+            background-image: url('../../assets/imgs/ofert/placeholder3.jpg');
+        }
+        &:nth-child(2) .card-img{
+            background-image: url('../../assets/imgs/ofert/placeholder5.jpg');
+        }
+        &:nth-child(3) .card-img{
+            background-image: url('../../assets/imgs/ofert/placeholder6.jpg');
         }
     }
 }
